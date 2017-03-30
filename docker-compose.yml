@@ -1,0 +1,14 @@
+version: '3'
+services:
+  # proxy:
+  #   image:
+  jenkins:
+    build:
+      context: ./images/jenkins
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+  nexus:
+    image: sonatype/nexus3
+  gogs:
+    image: gogs/gogs
